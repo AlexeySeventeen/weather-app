@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyWeather</title>
+    <!-- icon -->
+    <link rel="shortcut icon" href="./img/AppLogo.jpg" />
+    <!-- style -->
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet" />
+  </head>
+  <body>
+    <div class="mainWrapper">
+      <header class="header">
+        <div class="search__wrapper">
+          <input
+            placeholder="Enter your location"
+            type="text"
+            class="search__input" />
+          <img src="./img/searchLogo.svg" alt="search" class="search__icon" />
+        </div>
+
+        <div class="weather__wrapper">
+          <img src="./img/AppLogo.jpg" alt="smt" class="weather__img" />
+          <p class="weather__temp">20°C</p>
+          <p class="weather__comm">Hazy clouds</p>
+          <div class="line"></div>
+          <p id="day"></p>
+          <p id="time"></p>
+        </div>
+      </header>
+      <main></main>
+    </div>
+    <script src="./script/time.js"></script>
+  </body>
+</html>
