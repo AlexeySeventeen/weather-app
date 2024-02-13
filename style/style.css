@@ -1,14 +1,16 @@
 body {
-  color: #000;
-  font-family: 'Poppins';
-  font-weight: 300;
+  color: #212519;
+  font-family: 'Quicksand';
+  font-weight: 400;
   line-height: 1.5;
+  display: flex;
+  align-content: center;
 }
 .mainWrapper {
-  padding: 0 15px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 2fr;
+  width: 100%;
 }
 .header {
   height: 100%;
@@ -52,10 +54,25 @@ body {
 }
 .weather__comm {
   font-size: 20px;
+  margin-bottom: 16px;
 }
 .line {
   width: 250px;
   border: 2px solid #efefef;
   border-radius: 10px;
-  margin-bottom: 40px;
+  margin-bottom: 35px;
+}
+.weather__day {
+  font-size: 16px;
+}
+.weather__time {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.weather__loc {
+  font-size: 40px;
+}
+
+main {
+  background-color: #000;
 }

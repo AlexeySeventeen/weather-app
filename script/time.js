@@ -46,13 +46,13 @@ function timeOnPage() {
   time.innerHTML = `${days[currDay]}, ${hour}:${min}`;
 
   if (hour < 10 && min > 10) {
-    time.innerHTML = `0${hour}:${min}`;
+    time.innerHTML = `${days[currDay]}, 0${hour}:${min}`;
   }
   if (min < 10 && hour > 10) {
-    time.innerHTML = `${hour}:0${min}`;
+    time.innerHTML = `${days[currDay]}, ${hour}:0${min}`;
   }
   if (min < 10 && hour < 10) {
-    time.innerHTML = `0${hour}:0${min}`;
+    time.innerHTML = `${days[currDay]}, 0${hour}:0${min}`;
   }
 }
 
