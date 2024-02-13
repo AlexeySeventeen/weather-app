@@ -28,7 +28,7 @@ body {
   border-radius: 20px;
   border: 0;
   padding: 15px 45px 15px 15px;
-  font-size: 1rem;
+  font-size: 16px;
   color: #8c8c8c;
 }
 .search__icon {
@@ -74,5 +74,53 @@ body {
 }
 
 main {
-  background-color: #000;
+  background-color: #efefef;
+  padding: 25px;
+}
+
+/* option */
+.button {
+  font-size: 20px;
+  cursor: pointer;
+  color: #8c8c8c;
+}
+.button-right {
+  margin-left: 20px;
+}
+.button-active {
+  color: #748cf1;
+  font-size: 25px;
+}
+
+.weatherBox__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 30px;
+  row-gap: 60px;
+  margin-top: 20px;
+}
+.weatherBox {
+  display: flex;
+  flex-direction: column;
+  background-color: #748cf1;
+  color: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  min-height: 150px;
+  gap: 10px;
+}
+.weatherBox__text-high {
+  color: #eaeaea;
+}
+.weatherBox__text-mid {
+  font-size: 30px;
+  color: #fff;
+}
+.weatherBox__text-mid-lower {
+  font-size: 24px;
+  color: #fff;
+}
+.weatherBox__text-low {
+  font-size: 16px;
 }
