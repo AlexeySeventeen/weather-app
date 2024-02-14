@@ -13,7 +13,6 @@ body {
   width: 100%;
 }
 .header {
-  height: 100%;
   padding: 20px;
 }
 
@@ -123,4 +122,36 @@ main {
 }
 .weatherBox__text-low {
   font-size: 16px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 45px;
+  padding: 0 10px;
+}
+footer a {
+  color: #056ad5 !important;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media (max-width: 1000px) {
+  .mainWrapper {
+    display: block;
+  }
+}
+@media (max-width: 800px) {
+  .weatherBox__wrapper {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+  }
+  footer {
+    margin-top: 25px;
+  }
 }
