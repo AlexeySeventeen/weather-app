@@ -23,18 +23,21 @@
           <input
             placeholder="Enter your location"
             type="text"
-            class="search__input" />
+            class="search__input"
+            id="search" />
           <img src="./img/searchLogo.svg" alt="search" class="search__icon" />
         </div>
 
         <div class="weather__wrapper">
-          <img src="./img/AppLogo.jpg" alt="smt" class="weather__img" />
-          <p class="weather__temp">20°C</p>
-          <p class="weather__comm">Hazy clouds</p>
+          <img src="" alt="smt" class="weather__img" id="img" />
+          <p class="weather__temp"><span id="mainT"></span>°C</p>
+          <p class="weather__comm" id="text"></p>
           <div class="line"></div>
           <p id="day" class="weather__day"></p>
           <p id="time" class="weather__time"></p>
-          <p class="weather__loc">Pskov, Russia</p>
+          <p class="weather__loc">
+            <span id="city"></span>, <span id="country"></span>
+          </p>
         </div>
       </header>
       <main>
@@ -46,32 +49,40 @@
           <div class="weatherBox__wrapper">
             <div class="weatherBox">
               <div class="weatherBox__text-high">Wind</div>
-              <div class="weatherBox__text-mid">3KM/h</div>
-              <div class="weatherBox__text-low">NNE</div>
+              <div class="weatherBox__text-mid">
+                <span id="wind"></span> km/h
+              </div>
+              <div class="weatherBox__text-low" id="wind_dir"></div>
             </div>
             <div class="weatherBox">
               <div class="weatherBox__text-high">Humidity</div>
-              <div class="weatherBox__text-mid">32%/h</div>
+              <div class="weatherBox__text-mid">
+                <span id="humidity"></span>%
+              </div>
               <div class="weatherBox__text-low"></div>
             </div>
             <div class="weatherBox">
               <div class="weatherBox__text-high">Real feel</div>
-              <div class="weatherBox__text-mid">32°C</div>
+              <div class="weatherBox__text-mid"><span id="realT"></span>°C</div>
               <div class="weatherBox__text-low"></div>
             </div>
             <div class="weatherBox">
               <div class="weatherBox__text-high">UV index</div>
-              <div class="weatherBox__text-mid">5</div>
+              <div class="weatherBox__text-mid" id="UV"></div>
               <div class="weatherBox__text-low">Moderate</div>
             </div>
             <div class="weatherBox">
               <div class="weatherBox__text-high">Pressure</div>
-              <div class="weatherBox__text-mid">1018 mbbar</div>
+              <div class="weatherBox__text-mid">
+                <span id="pressure"></span> mbbar
+              </div>
               <div class="weatherBox__text-low">Falling</div>
             </div>
             <div class="weatherBox">
               <div class="weatherBox__text-high">Chance of rain</div>
-              <div class="weatherBox__text-mid">1%</div>
+              <div class="weatherBox__text-mid">
+                <span id="rainChance"></span>%
+              </div>
               <div class="weatherBox__text-low"></div>
             </div>
             <div class="weatherBox">
@@ -110,5 +121,6 @@
       </main>
     </div>
     <script src="./script/time.js"></script>
+    <script src="./script/api.js"></script>
   </body>
 </html>
