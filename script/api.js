@@ -1,9 +1,7 @@
 const key = 'd298739086c143b689482526241902';
 
-let city = 'Pskov';
-
-const urlJSONnow = `https://api.weatherapi.com/v1/current.json?key=${key}&q=${city}`;
-const urlJSONastro = `https://api.weatherapi.com/v1/astronomy.json?key=${key}&q=${city}`;
+const urlJSONauto = `https://api.weatherapi.com/v1/current.json?key=${key}&q=auto:ip`;
+const urlJSONautoAstro = `https://api.weatherapi.com/v1/astronomy.json?key=${key}&q=auto:ip`;
 
 // const for now
 const mainT = document.querySelector('#mainT');
@@ -19,7 +17,7 @@ const uv = document.querySelector('#UV');
 const pressure = document.querySelector('#pressure');
 
 // now api
-fetch(urlJSONnow).then((value) => {
+fetch(urlJSONauto).then((value) => {
   const headers = {'Content-Type': 'application/json'};
   value
     .json()
@@ -28,7 +26,7 @@ fetch(urlJSONnow).then((value) => {
         (mainT.innerHTML = value.current.temp_c),
         (text.innerHTML = value.current.condition.text),
         (img.src = value.current.condition.icon),
-        (cityHTML.innerHTML = value.location.name),
+        (cityHTML.innerHTML = value.location.region),
         (country.innerHTML = value.location.country),
         (wind.innerHTML = value.current.wind_kph),
         (windDir.innerHTML = value.current.wind_dir),
@@ -47,7 +45,7 @@ const moonRise = document.querySelector('#moonRise');
 const moonSet = document.querySelector('#moonSet');
 
 // sun/moon api
-fetch(urlJSONastro).then((value) => {
+fetch(urlJSONautoAstro).then((value) => {
   const headers = {'Content-Type': 'application/json'};
   value
     .json()
@@ -61,8 +59,8 @@ fetch(urlJSONastro).then((value) => {
     );
 });
 
-// TODO sun/moon
-// TODO maxT and chance of rain
+// TODO maxT, chance of rain and localArray time
+
 // TODO search icon hover
 // TODO search
 // TODO img

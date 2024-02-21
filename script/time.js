@@ -1,7 +1,5 @@
 const time = document.querySelector('#time');
 const day = document.querySelector('#day');
-const timeBefore = document.querySelector('#timeBefore');
-const timeAfter = document.querySelector('#timeAfter');
 
 const monthArray = [
   'January',
@@ -37,11 +35,6 @@ const year = newDate.getFullYear();
 
 day.innerHTML = `${thisDay} ${monthArray[month]} ${year}`;
 
-// time on weather part
-let hour = newDate.getHours();
-let min = newDate.getMinutes();
-timeBefore.innerHTML = `${hour - 2}:${min}  `;
-timeAfter.innerHTML = `${hour + 2}:${min} `;
 // time on main part
 const currDay = newDate.getDay();
 

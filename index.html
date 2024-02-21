@@ -35,6 +35,10 @@
           <div class="line"></div>
           <p id="day" class="weather__day"></p>
           <p id="time" class="weather__time"></p>
+          <div>
+            <p class="weather__day weather__loc-Time">Local time:</p>
+            <div id="localTime" class="weather__time"></div>
+          </div>
           <p class="weather__loc">
             <span id="city"></span>, <span id="country"></span>
           </p>
@@ -69,14 +73,14 @@
             <div class="weatherBox">
               <div class="weatherBox__text-high">UV index</div>
               <div class="weatherBox__text-mid" id="UV"></div>
-              <div class="weatherBox__text-low">Moderate</div>
+              <div class="weatherBox__text-low"></div>
             </div>
             <div class="weatherBox">
               <div class="weatherBox__text-high">Pressure</div>
               <div class="weatherBox__text-mid">
                 <span id="pressure"></span> mbbar
               </div>
-              <div class="weatherBox__text-low">Falling</div>
+              <div class="weatherBox__text-low"></div>
             </div>
             <div class="weatherBox">
               <div class="weatherBox__text-high">Chance of rain</div>
@@ -87,11 +91,13 @@
             </div>
             <div class="weatherBox">
               <div class="weatherBox__text-high">Temperature history</div>
-              <div class="weatherBox__text-mid-lower">
-                <span class="weatherBox__text-low" id="timeBefore"></span>30°C
+              <div>
+                <span class="weatherBox__text-low">Max</span>
+                <span class="weatherBox__text-mid-lower">30°C</span>
               </div>
-              <div class="weatherBox__text-mid-lower">
-                <span class="weatherBox__text-low" id="timeAfter"></span>28°C
+              <div>
+                <span class="weatherBox__text-low">Min</span>
+                <span class="weatherBox__text-mid-lower">28°C</span>
               </div>
             </div>
             <div class="weatherBox">
