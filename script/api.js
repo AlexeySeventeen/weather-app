@@ -51,5 +51,20 @@ fetch(urlJSONastro).then((value) => {
   const headers = {'Content-Type': 'application/json'};
   value
     .json()
-    .then((value) => (sunRise.innerHtml = value.astronomy.astro.sunrise));
+    .then(
+      (value) => (
+        (sunRise.innerText = value.astronomy.astro.sunrise),
+        (sunSet.innerText = value.astronomy.astro.sunset),
+        (moonRise.innerText = value.astronomy.astro.moonrise),
+        (moonSet.innerText = value.astronomy.astro.moonset)
+      )
+    );
 });
+
+// TODO sun/moon
+// TODO maxT and chance of rain
+// TODO search icon hover
+// TODO search
+// TODO img
+// TODO tomorrow
+// TODO animation when waiting
